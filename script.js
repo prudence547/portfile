@@ -351,7 +351,7 @@ item.remove();
 }
 function openSecret(){
 
-    const correctPassword = "Stephen"; 
+    const correctPassword = "Forever"; 
     // Change this to your own password
 
     const enteredPassword = document.getElementById("password").value;
