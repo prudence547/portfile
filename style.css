@@ -5,10 +5,9 @@
     font-family:'Poppins', sans-serif;
 }
 
-body{
-    background:linear-gradient(135deg,#ffe6f2,#fff8fc);
-    color:#4b2942;
-    overflow-x:hidden;
+body {
+    background: linear-gradient(135deg, #8e44ad, #d63384, #ff9ff3);
+    background-attachment: fixed;
 }
 
 
