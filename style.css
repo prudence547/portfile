@@ -1,0 +1,643 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffe6f2,#fff8fc);
+    color:#4b2942;
+    overflow-x:hidden;
+}
+
+
+/* Loading Screen */
+
+.loader{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:#fff0f7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+    animation:hideLoader 3s forwards;
+}
+
+.loader h1{
+    color:#d94f9b;
+    font-size:35px;
+    text-align:center;
+    animation:pulse 1.5s infinite;
+}
+
+
+@keyframes hideLoader{
+
+    0%,80%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+
+}
+
+
+@keyframes pulse{
+
+    50%{
+        transform:scale(1.1);
+    }
+
+}
+
+
+
+/* Welcome Section */
+
+.welcome{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    padding:20px;
+
+}
+
+
+.content{
+
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(15px);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.1);
+
+}
+
+
+
+.profile{
+
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    animation:float 4s infinite;
+
+}
+
+
+
+@keyframes float{
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+
+#name{
+
+    margin-top:20px;
+    font-size:45px;
+    color:#d94f9b;
+
+}
+
+
+
+.content p{
+
+    margin:20px;
+    font-size:18px;
+
+}
+
+
+
+
+button{
+
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(45deg,#ff7eb3,#ff65a3);
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 0 20px #ff8dc7;
+    transition:0.4s;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+
+/* Navigation */
+
+nav{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:20px;
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+    color:#c43d83;
+    background:white;
+    padding:10px 18px;
+    border-radius:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+
+/* Cards */
+
+.cards{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:40px;
+
+}
+
+
+
+.card{
+
+    width:300px;
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    transition:0.4s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.card h2{
+
+    color:#d94f9b;
+    margin-bottom:15px;
+
+}
+
+
+
+/* Floating particles */
+
+.particles span{
+
+    position:absolute;
+    font-size:25px;
+    animation:move 10s linear infinite;
+
+}
+
+
+
+@keyframes move{
+
+    0%{
+
+        transform:translateY(100vh);
+        opacity:0;
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+    }
+
+
+    100%{
+
+        transform:translateY(-10vh);
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+footer{
+
+    text-align:center;
+    padding:30px;
+    color:#b94b87;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    #name{
+
+        font-size:32px;
+
+    }
+
+
+    .content{
+
+        padding:25px;
+
+    }
+
+
+    .profile{
+
+        width:140px;
+        height:140px;
+
+    }
+    /* Gallery Images */
+
+.gallery-img{
+    width:100%;
+    max-width:250px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    margin:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    transition:0.5s;
+}
+
+
+.gallery-img:hover{
+    transform:scale(1.05) rotate(2deg);
+}
+
+
+
+/* Audio and Video */
+
+audio,
+video{
+
+    width:90%;
+    border-radius:15px;
+    margin:15px;
+
+}
+
+
+
+/* Night Page */
+
+.night-page{
+
+    background:
+    linear-gradient(
+    to bottom,
+    #050014,
+    #160033
+    );
+
+    color:white;
+    min-height:100vh;
+
+}
+
+
+
+.night-page .content{
+
+    background:rgba(255,255,255,0.12);
+    color:white;
+
+}
+
+
+
+.night-page h1{
+
+    color:#ffd6ff;
+
+}
+
+
+
+.night-page p{
+
+    color:#ffffff;
+
+}
+
+
+
+/* Glowing effect */
+
+.content button{
+
+    animation:glow 2s infinite;
+
+}
+
+
+
+@keyframes glow{
+
+    50%{
+
+        box-shadow:
+        0 0 30px #ff69b4;
+
+    }
+
+}
+
+
+
+/* Smooth page appearance */
+
+body{
+
+    animation:pageAppear 1s ease;
+
+}
+
+
+
+@keyframes pageAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* Floating particle styling */
+
+.particles span{
+
+    position:fixed;
+    bottom:-50px;
+    z-index:-1;
+
+}
+
+
+
+/* Better mobile cards */
+
+@media(max-width:600px){
+
+
+.cards{
+
+    padding:20px;
+
+}
+
+
+
+.card{
+
+    width:90%;
+
+}
+
+
+
+.gallery-img{
+
+    height:180px;
+
+}
+
+
+
+button{
+
+    font-size:16px;
+
+}
+
+
+}
+
+
+}
+/* Royal Blue Theme Opening Animation */
+
+body{
+    background:linear-gradient(135deg,#001f5c,#0047ab,#87ceeb);
+}
+
+
+/* Loader */
+
+.loader{
+
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(135deg,#001f5c,#0047ab);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:2000;
+    animation:hideLoader 4s forwards;
+
+}
+
+
+.loader h1{
+
+    color:white;
+    font-size:38px;
+    margin-top:30px;
+    animation:fadeText 2s infinite alternate;
+
+}
+
+
+.loader p{
+
+    color:#d9ecff;
+    font-size:20px;
+
+}
+
+
+
+/* Flower */
+
+.flower{
+
+    width:120px;
+    height:120px;
+    position:relative;
+    animation:bloom 3s ease forwards;
+
+}
+
+
+.petal{
+
+    position:absolute;
+    width:60px;
+    height:80px;
+    background:#4da6ff;
+    border-radius:50%;
+    left:30px;
+    top:20px;
+    transform-origin:bottom center;
+
+}
+
+
+
+.petal1{
+    transform:rotate(0deg);
+}
+
+.petal2{
+    transform:rotate(90deg);
+}
+
+.petal3{
+    transform:rotate(180deg);
+}
+
+.petal4{
+    transform:rotate(270deg);
+}
+
+
+
+.center{
+
+    position:absolute;
+    width:45px;
+    height:45px;
+    background:#ffd700;
+    border-radius:50%;
+    top:38px;
+    left:38px;
+
+}
+
+
+
+
+@keyframes bloom{
+
+    from{
+
+        transform:scale(0);
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+@keyframes fadeText{
+
+    from{
+
+        opacity:0.5;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+@keyframes hideLoader{
+
+    0%,80%{
+
+        opacity:1;
+
+    }
+
+
+    100%{
+
+        opacity:0;
+        visibility:hidden;
+
+    }
+
+}

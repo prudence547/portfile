@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Media | A Beautiful Beginning</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="particles"></div>
+
+
+
+<nav>
+
+<a href="index.html">🏠 Home</a>
+<a href="about.html">👩 About Me</a>
+<a href="gallery.html">📸 Gallery</a>
+<a href="media.html">🎵 Media</a>
+<a href="journey.html">🎓 Journey</a>
+<a href="dreams.html">🎯 Dreams</a>
+<a href="future.html">💌 Future Me</a>
+<a href="secret.html">🔐 Secret</a>
+
+</nav>
+
+
+
+
+
+<section class="welcome">
+
+<div class="content">
+
+<h1>🎵 My Media World</h1>
+
+<p>
+Songs, videos and voice notes that hold special memories.
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="cards">
+
+
+
+<div class="card">
+
+<h2>🎶 My Favorite Songs</h2>
+
+
+<audio controls>
+
+<source src="musics/favorite.mp3" type="audio/mp3">
+
+Your browser does not support audio.
+
+</audio>
+
+
+<br><br>
+
+
+<audio controls>
+
+<source src="musics/intro.mp3" type="audio/mp3">
+
+</audio>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<h2>🎥 My Videos</h2>
+
+
+<video controls width="250">
+
+<source src="videos/video1.mp4" type="video/mp4">
+
+</video>
+
+
+<br><br>
+
+
+<video controls width="250">
+
+<source src="videos/video2.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<h2>🎤 My Voice Notes</h2>
+
+
+<audio controls>
+
+<source src="voices/M.m4a" type="audio/mp3">
+
+</audio>
+
+
+<br><br>
+
+
+<audio controls>
+
+<source src="voices/S.m4a" type="audio/mp3">
+
+</audio>
+
+
+
+<p>
+Little pieces of my voice and memories.
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<footer>
+
+❤️ Music, memories and moments | A Beautiful Beginning ❤️
+
+</footer>
+
+<audio id="siteMusic" loop>
+    <source src="musics/background.m4a" type="audio/mp4">
+</audio>
+
+
+
+<script src="script.js"></script>
+<script>
+
+const music = document.getElementById("siteMusic");
+
+const mediaFiles = document.querySelectorAll("audio, video");
+
+
+mediaFiles.forEach(file=>{
+
+
+file.addEventListener("play",()=>{
+
+    if(music){
+
+        music.pause();
+
+    }
+
+});
+
+
+
+file.addEventListener("ended",()=>{
+
+    if(music){
+
+        music.play();
+
+    }
+
+});
+
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
